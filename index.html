@@ -5,7 +5,7 @@
   At our office we are all Mac and Linux guys,
   but Steve Ballmer has a special place in our heart.
 
-  You can create a PR for this website if you like here:
+  You can communicate about this website here:
   https://github.com/adriaanvanrossum/developersdevelopersdevelopers.io
 
   This website is made by Adriaan van Rossum
@@ -29,6 +29,7 @@
     overflow: hidden;
     position: relative;
     cursor: ne-resize;
+    font-family: Helvetica;
   }
   a.ribbon {
     display: block;
@@ -43,7 +44,6 @@
     text-decoration: none;
     text-align: center;
     padding: 100px 100px 10px;
-    font-family: Helvetica;
     font-size: 12px;
   }
   video {
@@ -61,9 +61,18 @@
     transform: translateX(-50%) translateY(-50%);
     background-size: cover; 
   }
+  .button {
+    background-color: #eb6919;
+    color: white;
+    border-radius: 2px;
+    padding: 7px 14px;
+    font-size: 20px;
+  }
 </style>
 
 <a class="ribbon" href="https://membergetmember.co/vacatures/developer/?utm_source=developersdevelopersdevelopers.io" target="_blank">we<br>are<br>hiring</a>
+
+<a class="button">PLAY</a>
   
 <video playsinline autoplay loop>
   <source src="/video/steve-ballmer-developers-developers-developers.mp4" type="video/mp4">
@@ -73,6 +82,26 @@
   you can <a href="/video/steve-ballmer-developers-developers-developers.mp4">download it</a>
   and watch Steve Ballmer with your favorite video player!
 </video>
+
+<script>
+var button = document.querySelector('.button');
+var video = document.querySelector('video');
+  
+button.addEventListener('click', function() {
+  video.play();
+});
+  
+var startedPlaying = false;
+video.addEventListener('playing', function() {
+  startedPlaying = true;
+});
+
+window.setTimeout(function() {
+  if (!startedPlaying) {
+    button.style.display = 'block';
+  }
+}, 2000);
+</script>
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-243569-44"></script>
 <script>
