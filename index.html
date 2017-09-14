@@ -62,11 +62,17 @@
     background-size: cover; 
   }
   .button {
+    display: none;
     background-color: #eb6919;
     color: white;
     border-radius: 2px;
     padding: 7px 14px;
     font-size: 20px;
+    position: absolute;
+    bottom: 20%;
+    left: calc(50% - 50px);
+    width: 100px;
+    text-align: center;
   }
 </style>
 
@@ -99,7 +105,7 @@ video.addEventListener('playing', function() {
 
 window.setTimeout(function() {
   if (!startedPlaying) {
-    button.style.display = 'block';
+    button.style.display = 'inline';
   }
 }, 2000);
 </script>
