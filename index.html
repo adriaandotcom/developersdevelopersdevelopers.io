@@ -61,22 +61,33 @@
     transform: translateX(-50%) translateY(-50%);
     background-size: cover; 
   }
-  .button {
-    background-color: #eb6919;
-    color: white;
-    border-radius: 2px;
+  button {
+    // Reset
+    border: none;
+    margin: 0;
+    width: auto;
+    overflow: visible;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+
+    // Apply our own style
+    color: #428ee1;
     padding: 7px 14px;
     font-size: 20px;
     position: absolute;
     bottom: 20%;
-    left: calc(50% - 50px);
-    width: 100px;
-    text-align: center;
+    left: 50%;
+    background-color: white;
+    transform: translateX(-50%);
+    cursor: pointer;
   }
   svg {
-    width: 24px;
-    height: 24px;
-    fill: white;
+    fill: #428ee1;
+    margin-right: 5px;
+    vertical-align: bottom;
   }
 </style>
 
@@ -84,9 +95,9 @@
   <a class="ribbon" href="https://membergetmember.co/vacatures/developer/?utm_source=developersdevelopersdevelopers.io" target="_blank">we<br>are<br>hiring</a>
 -->
   
-<a class="button">
+<button>
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    width="611.98px" height="611.98px" viewBox="0 0 611.98 611.98" xml:space="preserve">
+    viewBox="0 0 611.98 611.98" xml:space="preserve">
   <g>
     <path d="M91.226,414.833h31.025l50.421-50.42h-56.226V232.852h102.681c6.704,0,13.101-2.698,17.884-7.439l116.641-117.438v75.478
       l50.421-50.421V46.844c0-10.199-6.214-19.457-15.677-23.3c-9.36-3.924-20.172-1.757-27.469,5.519L208.582,182.431H91.226
@@ -100,7 +111,7 @@
   </g>
   </svg>
   UNMUTE
-</a>
+</button>
   
 <video playsinline muted autoplay loop>
   <source src="/video/steve-ballmer-developers-developers-developers.mp4" type="video/mp4">
@@ -112,7 +123,7 @@
 </video>
 
 <script>
-var button = document.querySelector('.button');
+var button = document.querySelector('button');
 var video = document.querySelector('video');
 
 button.addEventListener('click', function() {
