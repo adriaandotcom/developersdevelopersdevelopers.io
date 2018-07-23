@@ -80,9 +80,9 @@
   <a class="ribbon" href="https://membergetmember.co/vacatures/developer/?utm_source=developersdevelopersdevelopers.io" target="_blank">we<br>are<br>hiring</a>
 -->
   
-<a class="button">PLAY</a>
+<a class="button">UNMUTE</a>
   
-<video playsinline autoplay loop>
+<video playsinline muted autoplay loop>
   <source src="/video/steve-ballmer-developers-developers-developers.mp4" type="video/mp4">
   <source src="/video/steve-ballmer-developers-developers-developers.ogv" type="video/ogg">
   <source src="/video/steve-ballmer-developers-developers-developers.webm" type="video/webm">
@@ -94,22 +94,10 @@
 <script>
 var button = document.querySelector('.button');
 var video = document.querySelector('video');
-  
-button.addEventListener('click', function() {
-  video.play();
-  button.style.display = 'none';
-});
-  
-var startedPlaying = false;
-video.addEventListener('playing', function() {
-  startedPlaying = true;
-});
 
-window.setTimeout(function() {
-  if (!startedPlaying) {
-    button.style.display = 'inline';
-  }
-}, 2000);
+button.addEventListener('click', function() {
+  video.muted = false;
+});
 </script>
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-243569-44"></script>
